@@ -2,7 +2,7 @@
 
 this implementation is a version of the game “Set”.
 
-3 OUR VERSION OF THE GAME
+3 Version of the game "Set"
 
 The game contains a deck of 81 cards. Each card contains a drawing with four features (color, number, shape, shading).
 1 For the sake of simplicity, in this document we describe the standard version of the game (having 4 types of features, 3 options per feature, etc.). In the configuration file there are many values which can be configured (including the number of features, number of options per feature and more). Fully supporting all the configurable options in the configuration file will earn you a small bonus. See sections 4.6.3, 7.23.
@@ -14,6 +14,7 @@ The possible values of the features are:
 ▪ The geometry of the shapes: squiggle, diamond or oval.
 ▪ The shading of the shapes: solid, partial or empty.
 For example:
+
 ![image](https://user-images.githubusercontent.com/94444014/220152460-6720b0dd-f2f1-4ac6-8b73-6b2bf881f1c3.png)
 ![image](https://user-images.githubusercontent.com/94444014/220152479-db81c173-8c79-4874-af2a-d536bc62771a.png)
 ![image](https://user-images.githubusercontent.com/94444014/220152492-cdae1d9b-5d21-4a6b-8c0b-4c8074c1ebbe.png)
