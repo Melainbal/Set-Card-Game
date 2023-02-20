@@ -9,20 +9,27 @@ The game contains a deck of 81 cards. Each card contains a drawing with four fea
 The game starts with 12 drawn cards from the deck that are placed on a 3x4 grid on the table. The goal of each player is to find a combination of three cards from the cards on the table that are said to make up a “legal set”.
 A “legal set” is defined as a set of 3 cards, that for each one of the four features — color, number, shape, and shading — the three cards must display that feature as either: (a) all the same, or: (b) all different (in other words, for each feature the three cards must avoid having two cards showing one version of the feature and the remaining card showing a different version).
 The possible values of the features are:
+
 ▪ The color: red, green or purple.
+
 ▪ The number of shapes: 1, 2 or 3.
+
 ▪ The geometry of the shapes: squiggle, diamond or oval.
+
 ▪ The shading of the shapes: solid, partial or empty.
+
 For example:
 
 ![image](https://user-images.githubusercontent.com/94444014/220152460-6720b0dd-f2f1-4ac6-8b73-6b2bf881f1c3.png)
 ![image](https://user-images.githubusercontent.com/94444014/220152479-db81c173-8c79-4874-af2a-d536bc62771a.png)
 ![image](https://user-images.githubusercontent.com/94444014/220152492-cdae1d9b-5d21-4a6b-8c0b-4c8074c1ebbe.png)
+
 Example1: these 3 cards do form a set, because the shadings of the three cards are all the same, while the numbers, the colors, and the shapes are all different.
 
 ![image](https://user-images.githubusercontent.com/94444014/220152571-51d14753-88e3-4ba9-9120-a2cecf38fac8.png)
 ![image](https://user-images.githubusercontent.com/94444014/220152580-822373d3-d76f-4caf-850b-df8490d7ea25.png)
 ![image](https://user-images.githubusercontent.com/94444014/220152595-aba4d725-dce9-47a1-a9d9-3b11ac1e636f.png)
+
 Example 2: these 3 cards do not form a set (although the numbers of the three cards are all the same, and the colors, and shapes are all different, only two cards have the same shading).
 The game's active (i.e., initiate events) components contain the dealer and the players.
 
@@ -66,15 +73,25 @@ The penalty for marking an illegal set is getting frozen for a few seconds (i.e.
 4.4 The Dealer
 
 The dealer is represented by a single thread, which is the main thread in charge of the game flow. It handles the following tasks:
+
 ▪ Creates and runs the player threads.
+
 ▪ Dealing the cards to the table.
+
 ▪ Shuffling the cards.
+
 ▪ Collecting the cards back from the table when needed.
+
 ▪ Checking if the tokens that were placed by the player form a legal set.
+
 ▪ Keeping track of the countdown timer.
+
 ▪ Awarding the player with points and/or penalizing them.
+
 ▪ Checking if any legal sets can be formed from the remaining cards in the deck.
+
 ▪ Announcing the winner(s).
+
 Notes:
 1. When dealing cards to the table and collecting cards from the table the dealer thread should sleep for a short period (as is already written for you in Table::placeCard and Table::removeCard methods provided in the skeleton files).
 2. Checking user sets should be done “fairly” – if 2 players try to claim a set at roughly the same time, they should be serviced by the dealer in “first come first served” (FIFO) order. Any kind of synchronization mechanism used for this specific part of the program must take this into consideration.
