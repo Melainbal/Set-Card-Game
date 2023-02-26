@@ -1,11 +1,17 @@
 # Set-Card-Game
 
-this implementation is a version of the game “Set”.
+This implementation is a version of the game “Set”.
+short description of game: The game starts with 12 drawn cards from the deck that are placed on a 3x4 grid on the table. The goal of each player is to find a combination of three cards from the cards on the table that are said to make up a “legal set”. further more is explained below.
+In this implementation the only threads created are: 1 thread per player + 1 additional thread for non-human players.
+Also, the threads do not wake up unless some actual job needs to be done (e.g., a value needs to be changed on the display, key input needs to be handled, etc.).
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Additional information about implementation:
 
 3 Version of the game "Set"
 
 The game contains a deck of 81 cards. Each card contains a drawing with four features (color, number, shape, shading).
-1 For the sake of simplicity, in this document we describe the standard version of the game (having 4 types of features, 3 options per feature, etc.). In the configuration file there are many values which can be configured (including the number of features, number of options per feature and more). Fully supporting all the configurable options in the configuration file will earn you a small bonus. See sections 4.6.3, 7.23.
+For the sake of simplicity, in this document we describe the standard version of the game (having 4 types of features, 3 options per feature, etc.).
 The game starts with 12 drawn cards from the deck that are placed on a 3x4 grid on the table. The goal of each player is to find a combination of three cards from the cards on the table that are said to make up a “legal set”.
 A “legal set” is defined as a set of 3 cards, that for each one of the four features — color, number, shape, and shading — the three cards must display that feature as either: (a) all the same, or: (b) all different (in other words, for each feature the three cards must avoid having two cards showing one version of the feature and the remaining card showing a different version).
 The possible values of the features are:
