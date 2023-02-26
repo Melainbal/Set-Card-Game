@@ -2,6 +2,7 @@
 
 This implementation is a version of the game “Set”.
 short description of game: The game starts with 12 drawn cards from the deck that are placed on a 3x4 grid on the table. The goal of each player is to find a combination of three cards from the cards on the table that are said to make up a “legal set”. further more is explained below.
+
 In this implementation the only threads created are: 1 thread per player + 1 additional thread for non-human players.
 Also, the threads do not wake up unless some actual job needs to be done (e.g., a value needs to be changed on the display, key input needs to be handled, etc.).
 
